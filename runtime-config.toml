@@ -1,0 +1,7 @@
+
+# We provide the name of the Key Value store in the declaration. In this case `default`
+[key_value_store.redis]
+# The type of the KV provider: "redis", "azure_cosmos", or "spin" (sqlite)
+type = "redis"
+# The following depends on the provider chose, for "redis", this is the redis endpoint
+url = "redis://localhost"

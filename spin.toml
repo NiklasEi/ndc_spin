@@ -1,0 +1,34 @@
+spin_manifest_version = 2
+
+[application]
+name = "ndc_spin"
+version = "0.1.0"
+authors = ["Niklas Eicker"]
+description = "NDC Spin test"
+
+[[trigger.http]]
+route = "/test"
+component = "test"
+
+[component.test]
+source = "target/wasm32-wasi/release/test.wasm"
+allowed_outbound_hosts = []
+key_value_stores = ["redis"]
+
+[component.test.build]
+command = "cargo build --target wasm32-wasi --release"
+workdir = "test"
+watch = ["src/**/*.rs", "Cargo.toml"]
+
+[[trigger.http]]
+route = "/hello"
+component = "hello"
+
+[component.hello]
+source = "target/wasm32-wasi/release/hello.wasm"
+allowed_outbound_hosts = []
+
+[component.hello.build]
+command = "cargo build --target wasm32-wasi --release"
+workdir = "hello"
+watch = ["src/**/*.rs", "Cargo.toml"]

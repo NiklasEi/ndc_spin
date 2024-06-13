@@ -1,0 +1,9 @@
+[workspace]
+members = ["hello", "test"]
+edition = "2021"
+
+[workspace.dependencies]
+anyhow = "1"
+spin-sdk = "3.0.1"
+serde = { version = "1.0" }
+serde_json = "1.0"
