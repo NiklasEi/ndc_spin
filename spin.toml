@@ -32,3 +32,17 @@ allowed_outbound_hosts = []
 command = "cargo build --target wasm32-wasi --release"
 workdir = "hello"
 watch = ["src/**/*.rs", "Cargo.toml"]
+
+[[trigger.http]]
+route = "/render"
+component = "render"
+
+[component.render]
+source = "target/wasm32-wasi/release/render.wasm"
+allowed_outbound_hosts = []
+files = [{ source = "templates", destination = "/templates" }]
+
+[component.render.build]
+command = "cargo build --target wasm32-wasi --release"
+workdir = "render"
+watch = ["src/**/*.rs", "Cargo.toml"]

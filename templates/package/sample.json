@@ -1,0 +1,18 @@
+{
+  "test": "from sample data",
+  "items": [
+    {
+      "name": "Frank",
+      "one": "first",
+      "two": "second",
+      "three": "third"
+    },
+    {
+      "name": "John",
+      "one": "first_john",
+      "two": "second_john",
+      "three": "third_john"
+    }
+  ],
+  "germany": 42
+}

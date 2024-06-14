@@ -4,7 +4,7 @@ use spin_sdk::{http_component, key_value};
 
 #[derive(Serialize, Deserialize, Debug)]
 struct Counter {
-    count: usize
+    count: usize,
 }
 
 /// A simple Spin HTTP component.
@@ -15,16 +15,8 @@ fn handle_ndc_spin(req: Request) -> anyhow::Result<impl IntoResponse> {
     let store = key_value::Store::open("redis")?;
 
     let count: Counter = match store.get_json::<Counter>("counter").unwrap() {
-        Some(c) => {
-            Counter {
-                count: c.count + 1
-            }
-        },
-        None => {
-            Counter {
-                count: 1
-            }
-        },
+        Some(c) => Counter { count: c.count + 1 },
+        None => Counter { count: 1 },
     };
 
     store.set_json::<Counter>("counter", &count).unwrap();

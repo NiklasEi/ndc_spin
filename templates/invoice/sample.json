@@ -1,0 +1,63 @@
+{
+  "id": "2024-03-10t172205",
+  "issuingDate": "2024-04-27",
+  "deliveryDate": "2024-04-19",
+  "dueDate": "2024-05-06",
+  "banner": "ruffyAvatar.jpg",
+  "biller": {
+    "name": "Gyro Gearloose",
+    "title": "Inventor",
+    "company": "Crazy Inventions Ltd.",
+    "vat-id": "DL1234567",
+    "iban": "DE89370400440532013000",
+    "address": {
+      "country": "Disneyland",
+      "city": "Duckburg",
+      "postal-code": "123456",
+      "street": "Inventor Drive 23"
+    }
+  },
+  "recipient": {
+    "name": "Scrooge McDuck",
+    "title": "Treasure Hunter",
+    "vat-id": "DL7654321",
+    "address": {
+      "country": "Disneyland",
+      "city": "Duckburg",
+      "postal-code": "123456",
+      "street": "Killmotor Hill 1"
+    }
+  },
+  "items": [
+    {
+      "date": "2016-04-03",
+      "description": "Arc reactor",
+      "quantity": 1,
+      "price": 130
+    },
+    {
+      "date": "2016-04-05",
+      "description": "Flux capacitor",
+      "quantity": 1,
+      "price": 2700
+    },
+    {
+      "date": "2016-04-07",
+      "description": "Lightsaber",
+      "quantity": 2,
+      "price": 3600
+    },
+    {
+      "date": "2016-04-08",
+      "description": "Sonic screwdriver",
+      "quantity": 10,
+      "price": 800
+    },
+    {
+      "date": "2016-04-12",
+      "description": "Assembly",
+      "dur-min": 160,
+      "price": 53.33
+    }
+  ]
+}

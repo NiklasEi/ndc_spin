@@ -1,6 +1,7 @@
 [workspace]
-members = ["hello", "test"]
+members = ["hello", "test", "render"]
 edition = "2021"
+resolver = "2"
 
 [workspace.dependencies]
 anyhow = "1"
