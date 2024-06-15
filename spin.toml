@@ -34,7 +34,7 @@ workdir = "hello"
 watch = ["src/**/*.rs", "Cargo.toml"]
 
 [[trigger.http]]
-route = "/render"
+route = "/template/:id/render"
 component = "render"
 
 [component.render]

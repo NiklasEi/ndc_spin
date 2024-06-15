@@ -1893,6 +1893,7 @@ name = "render"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "serde_json",
  "spin-sdk",
  "templating",
  "templating_files",

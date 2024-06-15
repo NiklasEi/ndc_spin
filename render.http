@@ -1,0 +1,24 @@
+@HostAddress = https://ndc-spin-js354xud.fermyon.app
+@Template = test
+
+POST {{HostAddress}}/template/:id/render
+Content-Type: application/json
+
+{
+  "test": "from sample data",
+  "items": [
+    {
+      "name": "Frank",
+      "one": "first",
+      "two": "second",
+      "three": "third"
+    },
+    {
+      "name": "John",
+      "one": "first_john",
+      "two": "second_john",
+      "three": "third_john"
+    }
+  ]
+}
+###
