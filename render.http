@@ -1,7 +1,7 @@
-@HostAddress = https://ndc-spin-js354xud.fermyon.app
+@HostAddress = http://127.0.0.1:3000
 @Template = test
 
-POST {{HostAddress}}/template/:id/render
+POST {{HostAddress}}/template/{{Template}}/render
 Content-Type: application/json
 
 {

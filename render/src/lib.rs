@@ -8,7 +8,6 @@ use typst::foundations::Smart;
 /// A simple Spin HTTP component.
 #[http_component]
 fn handle_render(req: Request) -> anyhow::Result<impl IntoResponse> {
-    println!("Handling request to {:?}", req.header("spin-full-url"));
     let input = serde_json::from_reader::<_, serde_json::Value>(req.body())
         .context("Failed to parse input as json")?;
     let template = req
@@ -16,6 +15,7 @@ fn handle_render(req: Request) -> anyhow::Result<impl IntoResponse> {
         .context("Failed to get template name from request path")?
         .as_str()
         .context("Failed to convert template id to str")?;
+    println!("Render {} with {:?}", template, input);
 
     let document = render_template(
         template.to_string(),
